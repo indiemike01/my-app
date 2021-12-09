@@ -11,6 +11,6 @@ function Greeting() {
 }
 
 const Person = () => <h4>Billy Doe</h4>;
-const Message = () => <p>This is my sdfaf</p>;
+const Message = () => <p>This is my message</p>;
 
 ReactDom.render(<Greeting />, document.getElementById("root"));
