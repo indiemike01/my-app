@@ -5,23 +5,46 @@ import ReactDom from "react-dom";
 
 import "./index.css";
 
+//Set up vars
+
+const firstBook = {
+  img:
+    "https://images-na.ssl-images-amazon.com/images/I/71M4abh-afL._AC_UL906_SR906,600_.jpg",
+  title: "The real anthony Fauci",
+  author: "Robert Kennedy",
+};
+
+const secondBook = {
+  img:
+    "https://images-na.ssl-images-amazon.com/images/I/71xUvuJiqgL._AC_UL906_SR906,600_.jpg",
+  title: "Lilly from the vally",
+  author: "Carmen Gucci",
+};
+
 function BookList() {
   return (
     <section className="booklist">
-      <Book />
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      />
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
     </section>
   );
 }
 
-const Book = () => {
+const Book = ({ img, title, author }) => {
   return (
     <article className="book">
-      <img
-        src="https://images-na.ssl-images-amazon.com/images/I/71M4abh-afL._AC_UL906_SR906,600_.jpg"
-        alt=""
-      />
-      <h1>Robert Kennedy</h1>
-      <h4>The real anthony Fauci</h4>
+      <img src={img} alt="" />
+      <h1>{author}</h1>
+      <h4>{title}</h4>
+      <p></p>
     </article>
   );
 };
